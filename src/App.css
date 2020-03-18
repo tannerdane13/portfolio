@@ -2,22 +2,17 @@
   box-sizing: border-box;
 }
 
-.app {
+.flex-container {
+  display: flex;
+  align-items: top;
+  align-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
   background-image: url('./assets/background/BG.JPG');
   background-repeat: repeat;
-}
-
-.flex-container {
-display: flex;
-align-items: top;
-align-content: center;
-flex-flow: row wrap;
-justify-content: center;
-padding: 0;
-margin: 0;
-background-image: url('./assets/background/BG.JPG');
-background-repeat: repeat;
-width: 100%;
+  width: 100%;
 }
 .dropdown {
   visibility: visible;
@@ -49,6 +44,9 @@ width: 100%;
 }
 a.nav-link {
   display: none;
+}
+.Navbar {
+  background-color: red;
 }
 
 .carousel {

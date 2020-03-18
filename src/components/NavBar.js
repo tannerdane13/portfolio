@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, Form, FormControl, Button, Dropdown } from 'react-bootstrap';
+import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 
 
 class NavBar extends Component {
 	render () {
     return (
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="/Home">Tanner Jensen</Navbar.Brand>
+        <Navbar.Brand href="/Comics">Tanner Jensen</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/Comics">Comics</Nav.Link>
           <Nav.Link href="/InkIllustrations">Ink Illustrations</Nav.Link>

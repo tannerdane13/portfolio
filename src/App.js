@@ -54,12 +54,9 @@ import NightDrive16 from './assets/storyboards/nightDrive/NightDrive16.JPG'
 import NightDrive17 from './assets/storyboards/nightDrive/NightDrive17.JPG'
 import NightDrive18 from './assets/storyboards/nightDrive/NightDrive18.JPG'
 import NightDrive19 from './assets/storyboards/nightDrive/NightDrive19.JPG'
-import NavBar2 from './components/NavBar2';
 import NavBar from './components/NavBar';
 import { BrowserRouter as Router,
-  Switch,
-  Route,
-  Link } from 'react-router-dom'
+  Route, } from 'react-router-dom'
 import InkIllustrations from './components/InkIllustrations';
 import StoryboardMenu from './components/StoryboardMenu';
 import StoryboardCarousel from './components/StoryboardCarousel';
@@ -188,7 +185,7 @@ class App extends React.Component {
       },
       {
         id: 2,
-        title: 'Night Drive 2 ',
+        title: 'Night Drive 2',
         imgSrc: NightDrive2,
       },
       {
@@ -387,7 +384,7 @@ class App extends React.Component {
         <NavBar />
             <switch>
               <div className="flex-container">
-                <Route path='/Comics'>
+                <Route exact path='/Comics'>
                   <Comics comics = {this.state.comics}/>
                 </Route>
                 <Route path='/InkIllustrations'>
@@ -405,7 +402,7 @@ class App extends React.Component {
                 <Route path='/Contact'>
                   <Contact />
                 </Route>
-                </div>
+              </div>
             </switch>
       </Router>   
     );

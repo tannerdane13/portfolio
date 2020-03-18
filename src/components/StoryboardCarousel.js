@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import '../App.css';
-import StoryboardMedia from './StoryboardMedia';
-import { Carousel, CarouselItem } from 'react-bootstrap';
+import { Carousel, } from 'react-bootstrap';
 
 
 class StoryboardCarousel extends React.Component {
