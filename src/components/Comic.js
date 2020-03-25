@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../App.css';
+import styled from 'styled-components'
 
 
-function ComicMedia(props) {
+function Comic(props) {
   return (
     <img className="flex-item" src={props.comic.imgSrc} alt={props.comic.title} />
   );
 }
 
-ComicMedia.propTypes = {
-  comics: PropTypes.array.isRequired
+Comic.propTypes = {
+  images: PropTypes.array.isRequired
 }
 
-export default ComicMedia
+export default Comic

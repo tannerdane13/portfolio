@@ -1,14 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import '../App.css';
+import styled from 'styled-components'
 import { Carousel, } from 'react-bootstrap';
+
+const CarouselContainer = styled.div`
+  display: flex;
+  align-items: top;
+  align-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  max-width: 90%;
+`
 
 
 class StoryboardCarousel extends React.Component {
     render() {
       return (
-        <div className="carousel">
-          <Carousel pauseOnHover interval="9999999">
+        <CarouselContainer>
+          <Carousel pauseOnHover interval="2s">
             {this.props.storyboards.map((storyboardMedia) =>
               <Carousel.Item>
                 <img
@@ -19,7 +30,7 @@ class StoryboardCarousel extends React.Component {
               </Carousel.Item>
             )}
           </Carousel>
-        </div>
+        </CarouselContainer>
       );
     }
   }
@@ -28,8 +39,3 @@ StoryboardCarousel.propTypes = {
   storyboards: PropTypes.object.isRequired
 }
 export default StoryboardCarousel;
-
-/*
-
-this.props.storyboards.map((storyboard) => 
-<StoryboardMedia key={storyboard.id} storyboard={storyboard} />*/

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../App.css';
+import styled from 'styled-components'
 
 
 function StoryboardMedia(props) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem', }}>
       <Card.Img variant="top" src={props.storyboard.imgSrc} alt={props.storyboard.title} />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>

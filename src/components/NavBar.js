@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Dropdown } from 'react-bootstrap';
+import styled from 'styled-components'
+
+const StyledDropdownItem = styled(Dropdown.Item)`
+  background-color: palevioletred;
+`;
 
 
 class NavBar extends Component {
@@ -18,10 +23,10 @@ class NavBar extends Component {
             Menu
           </Dropdown.Toggle>
           <Dropdown.Menu style={{backgroundColor: "gray"}} alignRight variant="dark">
-            <Dropdown.Item style={{color: "white"}} href="/Comics">Comics</Dropdown.Item>
-            <Dropdown.Item style={{color: "white"}} href="/InkIllustrations">Ink Illustrations</Dropdown.Item>
-            <Dropdown.Item style={{color: "white"}} href="/Storyboards">Storyboards</Dropdown.Item>
-            <Dropdown.Item style={{color: "white"}} href="/Contact">Contact</Dropdown.Item>
+            <StyledDropdownItem href="/Comics">Comics</StyledDropdownItem>
+            <StyledDropdownItem href="/InkIllustrations">Ink Illustrations</StyledDropdownItem>
+            <StyledDropdownItem href="/Storyboards">Storyboards</StyledDropdownItem>
+            <StyledDropdownItem href="/Contact">Contact</StyledDropdownItem>
           </Dropdown.Menu>
         </Dropdown>
       </Navbar>
