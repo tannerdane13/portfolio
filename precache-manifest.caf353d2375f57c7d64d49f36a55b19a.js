@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b74ac309df6da95a8748b987bc75971",
+    "revision": "8520d4eee6e2f98396e5d95f03e6c7d6",
     "url": "/tannersportfolio/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tannersportfolio/static/css/2.1de7d946.chunk.css"
   },
   {
-    "revision": "5d5d0c6ccf10743aeab4",
+    "revision": "f505ee7f0e4d3e972e41",
     "url": "/tannersportfolio/static/css/main.1fbfa064.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tannersportfolio/static/js/2.aab6b458.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d5d0c6ccf10743aeab4",
-    "url": "/tannersportfolio/static/js/main.4093f837.chunk.js"
+    "revision": "f505ee7f0e4d3e972e41",
+    "url": "/tannersportfolio/static/js/main.36308f46.chunk.js"
   },
   {
     "revision": "da130089be81f1c5818c",
