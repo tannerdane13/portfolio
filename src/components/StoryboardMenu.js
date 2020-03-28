@@ -5,14 +5,15 @@ import styled from 'styled-components'
 
 const StyledCard = styled(Card)`
   width: 45%;
-  margin: 30px;
+  margin: 2%
 `
 const StyledBody = styled(Card.Body)`
   backgroundColor: {this.props.storyboardMenuItems.color};
+  text-align: center;
 `
 
 const StyledCardImage = styled(Card.Img)`
-  Height: 500px;
+  Height: 50%;
 `
 
 
@@ -27,11 +28,10 @@ class StoryboardMenu extends React.Component {
                 <a href={menuItem.path}>
                 <StyledCardImage src={menuItem.iconImage} alt={menuItem.title} />
                 <Card.Body style={{ backgroundColor:"red" }}>
-                  <Card.Title>{menuItem.title}</Card.Title>
+                  <Card.Title style={{textAlign:"center"}}>{menuItem.title}</Card.Title>
                   <Card.Text style={{textAlign:"center"}}>
                     Description of your {menuItem.title} storyboard...
                   </Card.Text>
-                  <Button style={{display:"block",margin:"auto",width:"180px"}} href={menuItem.path} variant="dark">Go somewhere</Button>
                 </Card.Body></a>
               </StyledCard>
             )

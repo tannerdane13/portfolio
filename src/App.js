@@ -1,7 +1,8 @@
 import React from 'react';
 import './style.css';
 import styled from 'styled-components'
-import Gallery from './components/Gallery';
+import Gallery from './components/Gallery'
+import Landing from './components/Landing'
 import Comic1 from './assets/comics/Comic1.PNG'
 import Comic2 from './assets/comics/Comic2.JPG'
 import Comic3 from './assets/comics/Comic3.PNG'
@@ -55,26 +56,22 @@ import NightDrive16 from './assets/storyboards/nightDrive/NightDrive16.JPG'
 import NightDrive17 from './assets/storyboards/nightDrive/NightDrive17.JPG'
 import NightDrive18 from './assets/storyboards/nightDrive/NightDrive18.JPG'
 import NightDrive19 from './assets/storyboards/nightDrive/NightDrive19.JPG'
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar'
 import { BrowserRouter as Router,
   Route, } from 'react-router-dom'
-import StoryboardMenu from './components/StoryboardMenu';
-import StoryboardCarousel from './components/StoryboardCarousel';
-import Contact from './components/Contact';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import StoryboardMenu from './components/StoryboardMenu'
+import StoryboardCarousel from './components/StoryboardCarousel'
+import Contact from './components/Contact'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const AppContainer = styled.div`
   background-color: #292b2c;
-  background-size: contain;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
-  max-width: 2000px;
+  min-height: 100vh;
 `
 
 
 class App extends React.Component {
+  landingImage = { title: 'Illustration 1', imgSrc: Illustration1, }
   state = {
     comics : [
       { id: 1, title: 'Comic 1', imgSrc: Comic1, },
@@ -149,14 +146,17 @@ class App extends React.Component {
         <NavBar />
         <AppContainer>
           <switch>
+           <Route exact path='/'>
+              <Landing image={this.landingImage}/>
+            </Route>
             <Route exact path='/Comics'>
-              <Gallery images = {this.state.comics}/>
+              <Gallery images={this.state.comics}/>
             </Route>
             <Route path='/InkIllustrations'>
-              <Gallery images = {this.state.inkIllustrations}/>
+              <Gallery images={this.state.inkIllustrations}/>
             </Route>
             <Route path='/Storyboards'>
-              <StoryboardMenu storyboardMenuItems = {this.state.storyboardMenuItems}/>
+              <StoryboardMenu storyboardMenuItems={this.state.storyboardMenuItems}/>
             </Route>
             <Route path='/NightDrive'>
               <StoryboardCarousel  storyboards = {this.state.nightDriveBoard}/>

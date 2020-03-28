@@ -4,32 +4,43 @@ import styled from 'styled-components'
 import { Carousel, } from 'react-bootstrap';
 
 const CarouselContainer = styled.div`
+  align-self: center;
   display: flex;
-  align-items: top;
-  align-content: center;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  max-width: 90%;
+	justify-content: center;
 `
+const StyledCarousel = styled(Carousel)`
+	align-self: center;
+  max-height: 90vh;
+  max-width: 100%
+	width: auto;
+	max-width: 100vw;
+`
+
+const StyledCarouselImage = styled(Carousel.Item)`
+  align-self: center;
+  max-height: 90vh;
+  max-width: 100%
+  width: auto;
+  max-width: 100vw;
+`
+
 
 
 class StoryboardCarousel extends React.Component {
     render() {
       return (
         <CarouselContainer>
-          <Carousel pauseOnHover interval="2s">
+          <StyledCarousel>
             {this.props.storyboards.map((storyboardMedia) =>
-              <Carousel.Item>
+              <StyledCarouselImage>
                 <img
                   className="d-block w-100"
                   src={storyboardMedia.imgSrc}
                   alt={storyboardMedia.id}
                 />
-              </Carousel.Item>
+              </StyledCarouselImage>
             )}
-          </Carousel>
+          </StyledCarousel>
         </CarouselContainer>
       );
     }

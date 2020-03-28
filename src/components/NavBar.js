@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const StyledDropdownItem = styled(Dropdown.Item)`
   background-color: palevioletred;
+  color: white;
 `;
 
 
@@ -11,7 +12,7 @@ class NavBar extends Component {
 	render () {
     return (
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="/Comics">Tanner Jensen</Navbar.Brand>
+        <Navbar.Brand href="/">Tanner Jensen</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/Comics">Comics</Nav.Link>
           <Nav.Link href="/InkIllustrations">Ink Illustrations</Nav.Link>
@@ -22,7 +23,7 @@ class NavBar extends Component {
           <Dropdown.Toggle variant="secondary" id="dropdown-basic">
             Menu
           </Dropdown.Toggle>
-          <Dropdown.Menu style={{backgroundColor: "gray"}} alignRight variant="dark">
+          <Dropdown.Menu style={{backgroundColor: "red"}} alignRight variant="dark">
             <StyledDropdownItem href="/Comics">Comics</StyledDropdownItem>
             <StyledDropdownItem href="/InkIllustrations">Ink Illustrations</StyledDropdownItem>
             <StyledDropdownItem href="/Storyboards">Storyboards</StyledDropdownItem>
